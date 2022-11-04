@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>musicians</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <article>
+        <div class="heading">
+          <span>The best musicians</span>
+          <h1>Beethoven, Mozart, Haydn, Bach</h1>
+        </div>
+        <div class="contentbox">
+          <div class="accordion">
+            <div class="title active" data-image="images/beethoven.png">
+              Ludwig van Beethoven
+            </div>
+            <div class="desc active">
+              <p>
+                A German musician He left several symphonies such as heroes,
+                fate, and chorus, and many great works such as operas and
+                sonatas, so he is called "malicious (adult of music)."Called the
+                "Adult of Music," Beethoven left many great works despite his
+                deafness.
+              </p>
+            </div>
+            <div class="title" data-image="images/mozart.png">
+              Wolfgang Amadeus Mozart
+            </div>
+            <div class="desc">
+              <p>
+                Austrian musicians He has excellent musical talent since he was
+                young and has published more than 100 works, including
+                symphonies, chamber music, and operas. Leaving behind great
+                works such as Figaro's Marriage, Don Giovanni, and the Magic
+                Flute.
+              </p>
+            </div>
+            <div class="title" data-image="images/haydn.png">
+              Franz Joseph Haydn
+            </div>
+            <div class="desc">
+              Hugo Wolf Representative of the classical composer and has called
+              the ‘the father of a symphony’.In addition to teaching music to
+              Beethoven and Haydn is one of Mozart's musical influence on and to
+              establishing a classical music.The Four Seasons, the creation,
+              many for his song.
+            </div>
+            <div class="title" data-image="images/bach.png">
+              Johann Sebastian Bach
+            </div>
+            <div class="desc">
+              He was born on 21 March 1685 in Eisenach, Thuringen, Germany, the
+              eighth son of Johann Ambrogius. Under the influence of his father,
+              a street musician, he learned violin and organ from an early age.
+              While performing and conducting in the court orchestra and working
+              as a church musician, he left many representative songs of baroque
+              music.
+            </div>
+          </div>
+          <div class="image">
+            <img src="images/beethoven.png" />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      $('.title').click(function () {
+        $(this).addClass('active')
+        $(this).siblings('.title').removeClass('active')
+        $(this).siblings('.desc').stop().slideUp()
+        $(this).next().stop().slideDown()
+
+        var dataImage = $(this).attr('data-image')
+        $('.image img').attr('src', dataImage)
+      })
+    </script>
+  </body>
+</html>
