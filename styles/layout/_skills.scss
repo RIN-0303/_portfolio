@@ -1,0 +1,230 @@
+.skills-section-mobile {
+  position: relative;
+  width: 100%;
+  height: 580px;
+}
+
+.skills-section.lg-only {
+  display: none;
+}
+
+.skills-section-mobile.fade-in {
+  animation: fadeIn ease-in 1s;
+  animation-fill-mode: forwards;
+}
+
+.skills-container > span {
+  width: 100%;
+  padding: 15px 0;
+  font-family: $eng-font;
+  font-size: $font-size-12;
+  font-weight: bold;
+  text-align: center;
+  color: $orange;
+  text-transform: uppercase;
+}
+
+.skills-container {
+  @include column-flexbox(center);
+  position: absolute;
+  width: 50%;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.skills-container > img {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px auto;
+}
+
+.skills-inner {
+  background-color: $lightyellow;
+  text-align: center;
+  line-height: 1.2;
+  border-top-left-radius: 8px;
+
+  &:first-child {
+    margin-top: 30px;
+  }
+}
+
+.skills-inner > p:first-child {
+  height: 30px;
+  padding: 8px 0;
+  font-family: $eng-font;
+  font-size: $font-size-12;
+  font-weight: bold;
+  text-align: center;
+  background-color: $dark-green;
+  color: #fff;
+  border-top-left-radius: 8px;
+}
+
+.skills-inner > p:last-child {
+  font-family: $ko-font;
+  font-size: $font-size-12;
+  padding: 5px;
+}
+
+.portfolio-btn {
+  padding: 10px 15px;
+  background-color: $dark-green;
+  font-size: $font-size-12;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:active {
+    background-color: $light-green;
+  }
+}
+
+@media screen and (min-width: 735px) {
+  .skills-section-mobile {
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .skills-section-mobile > span {
+    font-size: $font-size-14;
+  }
+
+  .skills-container {
+    height: 580px;
+  }
+
+  .skills-container > img {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 10px auto;
+  }
+
+  .skills-inner {
+    width: 200px;
+    text-align: center;
+    line-height: 1.5;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .skills-inner > p:first-child {
+    padding: 5px 0;
+    font-size: $font-size-14;
+  }
+
+  .skills-inner > p:last-child {
+    font-size: $font-size-12;
+    padding: 15px 0;
+  }
+
+  .portfolio-btn {
+    font-size: $font-size-16;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+}
+@media screen and (min-width: 835px) {
+  .skills-section-mobile {
+    display: none;
+  }
+  .skills-section.lg-only {
+    @include flexbox(around);
+    flex-direction: column;
+    position: relative;
+  }
+
+  .skills-container {
+    @include flexbox(center);
+    flex-direction: row;
+    width: 90%;
+    position: absolute;
+    span {
+      position: absolute;
+      width: 100%;
+      top: 20px;
+      padding: 10px;
+      font-family: $eng-font;
+      font-size: $font-size-24;
+      font-weight: bold;
+      text-align: center;
+      color: $orange;
+      text-transform: uppercase;
+    }
+  }
+
+  .skills-inner {
+    width: 200px;
+    height: 150px;
+    background-color: $lightyellow;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .skills-inner > p:first-child {
+    font-size: $font-size-18;
+  }
+
+  .skills-inner > p:last-child {
+    font-size: $font-size-16;
+  }
+
+  .portfolio-btn {
+    display: inline-block;
+    font-size: $font-size-20;
+    padding: 15px 25px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills-container > span {
+    font-size: $font-size-40;
+  }
+
+  .skills-container > img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skills-inner {
+    width: 200px;
+    height: 250px;
+    line-height: 1.5;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 33px;
+  }
+
+  .skills-inner > p:first-child {
+    height: 40px;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    font-size: $font-size-24;
+    border-top-left-radius: 10px;
+  }
+
+  .skills-inner > p:last-child {
+    font-size: $font-size-20;
+    padding: 15px;
+  }
+
+  .portfolio-btn {
+    padding: 25px 60px;
+    font-size: $font-size-26;
+  }
+}

@@ -1,0 +1,39 @@
+footer {
+  @include flexbox(evenly, center);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  font-family: $eng-font;
+  background-image: url('../../images/footer_darkgreen.png');
+  background-size: contain;
+  transition: height 0.5s;
+}
+footer:hover {
+  height: 80px;
+}
+a {
+  color: $butter;
+  margin-top: 10px;
+  transition: color 0.5s;
+  font-size: $font-size-12;
+}
+a:hover {
+  color: $black;
+}
+
+@media screen and (min-width: 735px) {
+  a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 835px) {
+  a {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  a {
+    font-size: 20px;
+  }
+}

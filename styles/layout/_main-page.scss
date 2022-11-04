@@ -1,0 +1,129 @@
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.main {
+  @include column-flexbox(center);
+  position: relative;
+}
+
+.main.fade-in {
+  animation: fadeIn ease-in 1.2s;
+  animation-fill-mode: forwards;
+}
+.title-container {
+  width: fit-content;
+  text-align: center;
+  line-height: 1.8em;
+  font-family: $ko-font;
+  font-size: $font-size-12;
+}
+
+.hello {
+  position: absolute;
+  width: fit-content;
+  top: 200px;
+  font-family: $eng-font;
+  text-align: center;
+  font-size: $font-size-18;
+  color: $orange;
+  border-right: 2px solid $orange;
+  animation: cursor 0.9s infinite;
+}
+
+.title-container > img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.title-container > a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 25px;
+  background-color: $dark-green;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: $font-size-12;
+  text-transform: capitalize;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $light-green;
+  }
+}
+
+@media screen and (min-width: 735px) {
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title-container {
+    font-size: $font-size-16;
+  }
+
+  .hello {
+    top: 150px;
+    font-size: $font-size-24;
+  }
+
+  .title-container > img {
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .title-container > a {
+    padding: 10px 40px;
+    font-size: $font-size-16;
+  }
+}
+
+@media screen and (min-width: 835px) {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title-container {
+    font-size: $font-size-18;
+  }
+
+  .hello {
+    font-size: $font-size-26;
+  }
+
+  .title-container > img {
+    margin-bottom: 20px;
+  }
+
+  .title-container > a {
+    padding: 10px 55px;
+    font-size: $font-size-18;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title-container {
+    line-height: 2em;
+    font-size: $font-size-20;
+  }
+
+  .hello {
+    font-size: $font-size-40;
+  }
+
+  .title-container > a {
+    margin-top: 50px;
+    padding: 15px 80px;
+    font-size: $font-size-26;
+  }
+}
