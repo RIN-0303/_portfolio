@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right: 2px solid $orange;
+  }
+  to {
+    border-right: 2px solid $lightyellow;
+  }
+}
