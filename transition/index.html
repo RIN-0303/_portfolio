@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nature</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="open-navi">
+      <i class="xi-bars"></i>
+    </div>
+    <div class="close-navi">
+      <i class="xi-close"></i>
+    </div>
+    <div class="main-preview">
+      <div>
+        <span class="enter">
+          <h1 data-text="nature">nature</h1>
+          <a href="#">enter</a>
+        </span>
+      </div>
+      <div></div>
+    </div>
+    <div class="main">
+      <div class="logo">
+        <div>
+          <img src="images/rainbow-lorikeet-g5babb6c9a_1920.jpg" />
+          <img src="images/bird-g14d1b1891_1920.jpg" />
+        </div>
+      </div>
+      <div class="navi">
+        <ul>
+          <li><a href="#">Introduce</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Event</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      $('.open-navi').click(function () {
+        $('.main-preview').fadeOut(500, function () {
+          $('.main').fadeIn(500)
+        })
+
+        $(this).addClass('active')
+        $('.close-navi').addClass('active')
+      })
+      $('.close-navi').click(function () {
+        $('.main').fadeOut(500, function () {
+          $('.main-preview').fadeIn(500)
+        })
+        $(this).removeClass('active')
+        $('.open-navi').removeClass('active')
+      })
+    </script>
+  </body>
+</html>
