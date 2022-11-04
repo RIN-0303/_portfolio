@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  width: 350px;
+  height: 400px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+}
+
+article > a {
+  width: 170px;
+  height: 55px;
+  margin-top: 15px;
+  background-image: url('./images/ZFtnMBJnHU_.png');
+  background-position: 0 -550px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+article > form {
+  width: 80%;
+  margin-top: 30px;
+}
+
+article > form > input {
+  width: 280px;
+  height: 30px;
+  margin-bottom: 5px;
+  border: 1px solid lightgray;
+  background-color: #fafafa;
+}
+
+article > form > input:focus {
+  outline: 1px solid #7c7c7c;
+}
+
+article > form > input::placeholder {
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+article > form > button {
+  width: 285px;
+  height: 30px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #b2defc;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.middle-line {
+  color: #7c7c7c;
+  font-weight: bold;
+}
+.middle-line > span:first-child::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 1px;
+  left: 35px;
+
+  margin-top: 10px;
+  background-color: lightgray;
+}
+
+.middle-line > span:last-child::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 1px;
+  margin-top: 10px;
+  right: 35px;
+  background-color: lightgray;
+}
+
+.login {
+  color: #033d66;
+  line-height: 2.5em;
+}
+
+.login > a:first-child {
+  font-weight: bold;
+}
+.login > a:last-child {
+  text-align: center;
+  font-size: 12px;
+}
+.fa-square-facebook {
+  font-size: 16px;
+  color: #296c9b;
+}
+
+.join {
+  background-color: #fff;
+  width: 350px;
+  height: 50px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.join > a {
+  font-weight: bold;
+  line-height: 4em;
+  color: #3da5f5;
+}
+
+.download {
+  width: 350px;
+  height: 100px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.download > span {
+  padding: 15px;
+}
+
+.download > a > img {
+  width: 120px;
+  height: 40px;
+}
+
+form > button,
+.login > a,
+.download > span {
+  display: block;
+}
