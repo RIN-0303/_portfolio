@@ -8,7 +8,8 @@
   display: none;
 }
 
-.skills-section-mobile.fade-in {
+.skills-section-mobile.fade-in,
+.skills-section.lg-only.fade-in {
   animation: fadeIn ease-in 1s;
   animation-fill-mode: forwards;
 }
